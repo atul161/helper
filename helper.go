@@ -1,12 +1,9 @@
 package helper
 
 import (
-	"errors"
-	"fmt"
 	"math"
 	"os"
 	"runtime"
-	"strings"
 )
 
 type Container struct {
