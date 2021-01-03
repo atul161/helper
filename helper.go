@@ -56,14 +56,12 @@ type Directory struct {
 // If we set override true then it will delete the specified folder and create new
 // directory.
 // Default Permission of the created directory will be 0755.
-//
 func (dir *Directory) MakeDirectory() error {
     filepath := dir.Path+"/"+dir.Name
 	//Checking the operating system.
 	if runtime.GOOS == "windows" {
 		filepath = dir.Path+"\\"+dir.Name
 	}
-
 	if dir.Override {
 		if err := os.RemoveAll(filepath); err != nil {
 			return err
